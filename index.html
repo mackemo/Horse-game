@@ -23,5 +23,23 @@
         </p>
         <button onclick="startGame()">Play</button>
      </div>
+
+
+    <!-- Game Area -->
+    <div id="game-area" style="display: none;">
+        <img id="horse" src="./images/horse.webp" alt="Horse">
+        <img id="obstacle" src="./images/haystack.webp" alt="Obstacle">        
+    </div>
+
+
+    <!-- UI -->
+    <div id="ui" style="display: none;">
+        <p id="statement">Loading...</p>
+        <button onclick="makeChoice('jump')">Jump ↑</button>
+        <button onclick="makeChoice('ride')">Ride Around →</button>
+        <p id="result"></p>
+        <p id="score">Score: 0</p>
+    </div>
+
 </body>
 </html>
