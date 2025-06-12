@@ -41,5 +41,27 @@
         <p id="score">Score: 0</p>
     </div>
 
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" style="display: none;">
+        <h2>🏁 Game Over!</h2>
+        <p id="final-score"></p>
+        <button onclick="startGame()">Play Again</button>
+    </div>
+
+
+    <!-- Round Transition Overlay -->
+    <div id="round-transition-overlay" style="display: none;">
+        <div class="overlay-content">
+          <h2>🐎 Round 2: Safety Rules!</h2>
+          <p>Now you'll decide if rule is GOOD then JUMP , if BAD, RIDE AROUND.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Local Audio -->
+    <audio id="correct-sound" src="./sounds/correct.ogg"></audio>
+    <audio id="wrong-sound" src="./sounds/wrong.ogg"></audio>
+
 </body>
 </html>
