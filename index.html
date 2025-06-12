@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Safety Game</title>
+    <link ref="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🏇 Horse Safety Game</h1>
+    </div>
+
+    <!-- Start Screen -->
+     <div id="start-screen">
+        <p> <br>Welcome! 
+            <div class="instructions">
+                <p><br><br>You will decide whether an emotion or a rule is good or bad.</p>
+                <p><br>If the emotion/rule is GOOD, then JUMP, if BAD, you must RIDE AROUND</p>
+                <p><br>1st round are emotions, 2nd round are rules.</p>
+            </div>
+            <p><br><br>Good Luck!</p>
+        </p>
+        <button onclick="startGame()">Play</button>
+     </div>
+
+
+    <!-- Game Area -->
+    <div id="game-area" style="display: none;">
+        <img id="horse" src="./images/horse.webp" alt="Horse">
+        <img id="obstacle" src="./images/haystack.webp" alt="Obstacle">        
+    </div>
+
+
+    <!-- UI -->
+    <div id="ui" style="display: none;">
+        <p id="statement">Loading...</p>
+        <button onclick="makeChoice('jump')">Jump ↑</button>
+        <button onclick="makeChoice('ride')">Ride Around →</button>
+        <p id="result"></p>
+        <p id="score">Score: 0</p>
+    </div>
+
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" style="display: none;">
+        <h2>🏁 Game Over!</h2>
+        <p id="final-score"></p>
+        <button onclick="startGame()">Play Again</button>
+    </div>
+
+
+    <!-- Round Transition Overlay -->
+    <div id="round-transition-overlay" style="display: none;">
+        <div class="overlay-content">
+          <h2>🐎 Round 2: Safety Rules!</h2>
+          <p>Now you'll decide if rule is GOOD then JUMP , if BAD, RIDE AROUND.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Local Audio -->
+    <audio id="correct-sound" src="./sounds/correct.ogg"></audio>
+    <audio id="wrong-sound" src="./sounds/wrong.ogg"></audio>
+
+</body>
+</html>
