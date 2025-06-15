@@ -22,7 +22,16 @@
             <p><br><br>Good Luck!</p>
         </p>
         <button onclick="startGame()">Play</button>
-     </div>
+    </div>
+
+
+    <!-- Round Indicator -->
+    <p id="round-indicator" style="display: none; font-weight: bold; margin-bottom: 10px;"></p>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar">
+        <div id="progress-bar-fill"></div>
+    </div>
 
 
     <!-- Game Area -->
@@ -63,5 +72,6 @@
     <audio id="correct-sound" src="./sounds/correct.ogg"></audio>
     <audio id="wrong-sound" src="./sounds/wrong.ogg"></audio>
 
+    <script src="game.js"></script>
 </body>
 </html>
