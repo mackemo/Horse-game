@@ -23,3 +23,27 @@ const ruleStatements = [
     { text: "You should run to get your saddle so you aren't late", type: "bad" },
     { text: "Tell your horse he's stupid when he makes a mistake", type: "bad" }
 ];
+
+// initialize variables
+let round = 1;
+let current = 0;
+let score = 0;
+let currentStatements = [];
+let inputEnabled = false;
+
+// DOM Elements
+const horse = document.getElementById("horse");
+const obstacle = document.getElementById("obstacle");
+const statementText = document.getElementById("statement");
+const resultText = document.getElementById("result");
+const scoreText = document.getElementById("score");
+const correctSound = document.getElementById("correct-sound");
+const wrongSound = document.getElementById("wrong-sound");
+const startScreen = document.getElementById("start-screen");
+const gameArea = document.getElementById("game-area");
+const ui = document.getElementById("ui");
+const roundIndicator = document.getElementById("round-indicator");
+const gameOverScreen = document.getElementById("game-over-screen");
+const finalScore = document.getElementById("final-score");
+const roundOverlay = document.getElementById("round-transition-overlay");
+const progressBarFill = document.getElementById("progress-bar-fill");
