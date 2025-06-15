@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+  
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+  
+  /* Game Area */
+  #game-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #ccffcc;
+    border: 2px solid #333;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  #horse {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 150px;
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  /* Obstacle starts off-screen and moves toward player */
+  #obstacle {
+    position: absolute;
+    bottom: 0;
+    right: -100px; /* start off-screen right */
+    width: 80px;
+    z-index: 5;
+  }
+  
+  /* Obstacle animation: moves from right to left */
+  /* Obstacle moving down and scaling up */
+  @keyframes moveObstacleDown {
+    0% {
+      top: -100px;
+      transform: translateX(-50%) scale(0.4);
+      opacity: 0.5;
+    }
+    100% {
+      top: 400px; /* moves off screen */
+      transform: translateX(-50%) scale(1.8);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Horse jump animation */
+  @keyframes horse-jump {
+    0% {
+      bottom: 0;
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      bottom: 80px; /* jump height just above haystack */
+      transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+      bottom: 0;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  
+  #ui {
+    padding: 10px;
+  }
+  
+  #statement {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+  }
+  
+  #result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007700;
+    height: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #005fcc;
+  }
+  
+  /* Round 2 Overlay */
+  #round-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .overlay-content {
+    max-width: 90%;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+  }
+  
+  /* Progress Bar */
+  #progress-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #00aa00;
+    transition: width 0.5s ease-in-out;
+  }
+  
